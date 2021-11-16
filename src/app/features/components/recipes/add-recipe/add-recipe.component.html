@@ -1,0 +1,106 @@
+<div class="col-md-8 m-auto">
+  <div class="content my-4">
+    <!-- {{addRecipe | json}} -->
+    <ng-container *ngIf="successMsg">
+      <div class="alert alert-success text-center">
+        <h2>
+          <i class="fa fa-check-circle"></i>
+        </h2>
+        <p>
+          Recipe has been analyzed successfully!
+        </p>
+
+      </div>
+
+    </ng-container>
+    <ng-container *ngIf="errorMsg">
+      <div class="alert alert-danger text-center">
+        <h2>
+          <i class="fa fa-times-circle"></i>
+        </h2>
+        <p>
+          Error Happened! Please Enter Valid data!
+        </p>
+
+      </div>
+
+    </ng-container>
+
+    <form
+    #addRecipe='ngForm'
+    (ngSubmit)="onSubmit(addRecipe)">
+
+      <div class="form-group">
+        <label for="recipeName">
+          Recipe Title:
+        </label>
+
+        <input
+        type="text"
+        name="recipeName"
+        id="recipeName"
+        #recipeName='ngModel'
+        name='recipeName'
+        ngModel
+        placeholder="Recipe Name ex: Pizza"
+        required
+        [class.invalid]='recipeName.invalid || recipeName.touched'
+        class="form-control">
+
+        <!-- Validation Message -->
+        <small
+          class="text-danger"
+          [class.d-none]='recipeName.valid || recipeName.untouched'>
+          This input is required!
+        </small>
+        <!-- Validation Message -->
+
+      </div>
+
+
+      <div class="form-group">
+        <label for="receipeContent">
+          Recipe Ingredients:
+        </label>
+        <textarea
+        name="receipeContent"
+        id="receipeContent"
+        cols="30"
+        rows="10"
+        placeholder="Recipe ingredients ex: 1 cup flour "
+        #recipeContent = 'ngModel'
+        name='recipeContent'
+        ngModel
+        [class.invalid]='recipeName.invalid || recipeName.touched'
+        class="form-control"
+        required
+        ></textarea>
+
+        <!-- Validation Message -->
+
+          <small
+            class="text-danger"
+            [class.d-none]='recipeContent.valid || recipeContent.untouched'>
+            This input is required!
+          </small>
+        <!-- Validation Message -->
+
+
+      </div>
+
+
+      <div class="text-right">
+        <button
+        class="btn btn-primary ml-auto"
+        type="submit"
+        [disabled]="!addRecipe.valid"
+        (click)="onSubmit"
+        > Analyze Recipe
+        <i class="fa fa-utensils"></i>
+      </button>
+      </div>
+    </form>
+
+  </div>
+
+</div>

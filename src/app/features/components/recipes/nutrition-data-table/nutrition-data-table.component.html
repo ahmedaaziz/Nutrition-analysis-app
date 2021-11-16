@@ -1,0 +1,98 @@
+<div class="text-center">
+  <h3>Nutrition Facts </h3>
+</div>
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Info</th>
+      <th scope="col">Amount</th>
+      <th scope="col">Unit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngIf="!recipeInfo">
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <ng-container *ngIf="recipeInfo">
+      <tr>
+        <th scope="row">Calories</th>
+        <td>{{recipeInfo?.calories}}</td>
+        <td>{{recipeInfo?.totalNutrients.ENERC_KCAL.unit}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Fats</th>
+        <td>{{recipeInfo?.totalNutrients.FAT.quantity}}</td>
+        <td>{{recipeInfo?.totalNutrients.FAT.unit}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Cholesterol</th>
+        <td>{{recipeInfo?.totalNutrients.CHOLE.quantity}}</td>
+        <td>{{recipeInfo?.totalNutrients.CHOLE.unit}}</td>
+      </tr>
+      <tr>
+        <th scope="row">{{recipeInfo?.totalNutrients.NA.label}}</th>
+        <td>{{recipeInfo?.totalNutrients.NA.quantity}}</td>
+        <td>{{recipeInfo?.totalNutrients.NA.unit}}</td>
+      </tr>
+      <tr>
+        <th scope="row">{{recipeInfo?.totalNutrients.CHOCDF.label}}</th>
+        <td>{{recipeInfo?.totalNutrients.CHOCDF.quantity}}</td>
+        <td>{{recipeInfo?.totalNutrients.CHOCDF.unit}}</td>
+      </tr>
+      <tr>
+        <th scope="row">{{recipeInfo?.totalNutrients.PROCNT.label}}</th>
+        <td>{{recipeInfo?.totalNutrients.PROCNT.quantity}}</td>
+        <td>{{recipeInfo?.totalNutrients.PROCNT.unit}}</td>
+      </tr>
+      <tr>
+        <th scope="row">{{recipeInfo?.totalNutrients.TOCPHA?.label}}</th>
+        <td>{{recipeInfo?.totalNutrients.TOCPHA.quantity}}</td>
+        <td>{{recipeInfo?.totalNutrients.TOCPHA.unit}}</td>
+      </tr>
+      <tr>
+        <th scope="row">{{recipeInfo?.totalNutrients.VITA_RAE.label}}</th>
+        <td>{{recipeInfo?.totalNutrients.VITA_RAE.quantity}}</td>
+        <td>{{recipeInfo?.totalNutrients.VITA_RAE.unit}}</td>
+      </tr>
+      <tr>
+        <th scope="row">{{recipeInfo?.totalNutrients.VITB6A.label}}</th>
+        <td>{{recipeInfo?.totalNutrients.VITB6A.quantity}}</td>
+        <td>{{recipeInfo?.totalNutrients.VITB6A.unit}}</td>
+      </tr>
+      <tr>
+        <th scope="row">{{recipeInfo?.totalNutrients.VITB12.label}}</th>
+        <td>{{recipeInfo?.totalNutrients.VITB12.quantity}}</td>
+        <td>{{recipeInfo?.totalNutrients.VITB12.unit}}</td>
+      </tr>
+      <tr>
+        <th scope="row">{{recipeInfo?.totalNutrients.VITC.label}}</th>
+        <td>{{recipeInfo?.totalNutrients.VITC.quantity}}</td>
+        <td>{{recipeInfo?.totalNutrients.VITC.unit}}</td>
+      </tr>
+      <tr>
+        <th scope="row">{{recipeInfo?.totalNutrients.VITD.label}}</th>
+        <td>{{recipeInfo?.totalNutrients.VITD.quantity}}</td>
+        <td>{{recipeInfo?.totalNutrients.VITD.unit}}</td>
+      </tr>
+      <tr>
+        <th scope="row">{{recipeInfo?.totalNutrients.VITK1.label}}</th>
+        <td>{{recipeInfo?.totalNutrients.VITK1.quantity}}</td>
+        <td>{{recipeInfo?.totalNutrients.VITK1.unit}}</td>
+      </tr>
+      <tr>
+        <th scope="row">{{recipeInfo?.totalNutrients.FE.label}}</th>
+        <td>{{recipeInfo?.totalNutrients.FE.quantity}}</td>
+        <td>{{recipeInfo?.totalNutrients.CHOLE.unit}}</td>
+      </tr>
+      <tr>
+        <th scope="row">{{recipeInfo?.totalNutrients.K.label}}</th>
+        <td>{{recipeInfo?.totalNutrients.K.quantity}}</td>
+        <td>{{recipeInfo?.totalNutrients.CHOLE.unit}}</td>
+      </tr>
+
+    </ng-container>
+
+  </tbody>
+</table>

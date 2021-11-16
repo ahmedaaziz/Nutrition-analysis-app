@@ -1,0 +1,18 @@
+<div class="content my-4">
+  <div class="row">
+    <div class="col-md-6">
+      <h4 class="my-4">{{loadedRecipe.recipeName | uppercase}} </h4>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let item of contentArr">
+          {{item}}
+        </li>
+      </ul>
+      <div class="my-3 text-right">
+        <button class="btn btn-primary" (click)="getTotalNutrition()">Total Nutrition</button>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <app-nutrition-data-table [recipeInfo]='recipeData'></app-nutrition-data-table>
+    </div>
+  </div>
+</div>

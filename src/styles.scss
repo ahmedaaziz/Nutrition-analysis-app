@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: url('assets/img/bg.png') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+.content {
+  background: #313131;
+  border-radius: 15px;
+  padding: 25px;
+  color: #fff;
+}

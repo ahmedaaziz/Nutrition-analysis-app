@@ -1,0 +1,27 @@
+.recipes-list {
+  color: #000;
+  a {
+    text-decoration: none;
+    text-transform: capitalize;
+    text-align: center;
+    margin: 1rem;
+    .recipe-card {
+      text-align: center;
+      background:#fff;
+      border-radius: 1em;
+      padding: 3em;
+      color: #007bff;
+      transition: 0.2s;
+
+      h3 {
+        font-size: 1.125rem;
+      }
+
+      &:hover {
+        background: #007bff;
+        color: #fff;
+      }
+    }
+
+  }
+}
