@@ -1,7 +1,6 @@
 import { AppRoutingModule } from './../app-routing.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './pages/home/home.component';
 import { RecipesComponent } from './components/recipes/recipes.component';
 import { RecipeDetailsComponent } from './components/recipes/recipe-details/recipe-details.component';
 import { RecipeListComponent } from './components/recipes/recipe-list/recipe-list.component';
@@ -14,7 +13,6 @@ import { NutritionDataTableComponent } from './components/recipes/nutrition-data
 
 @NgModule({
   declarations: [
-    HomeComponent,
     RecipesComponent,
     RecipeDetailsComponent,
     RecipeListComponent,
@@ -23,7 +21,6 @@ import { NutritionDataTableComponent } from './components/recipes/nutrition-data
     NutritionDataTableComponent
   ],
   exports:[
-    HomeComponent,
     RecipesComponent,
     RecipeDetailsComponent,
     RecipeListComponent,

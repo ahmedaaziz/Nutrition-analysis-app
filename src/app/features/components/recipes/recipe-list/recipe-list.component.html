@@ -1,12 +1,12 @@
 
-  <ng-container *ngIf="RecipesList ">
     <div class="recipes-list my-3">
       <div class="row">
+        <ng-container *ngIf="RecipesList">
           <div class="col-md-4" *ngFor="let item of RecipesList; let i = index">
             <a href="javascript:void(0)" routerLink="recipe/{{i}}">
               <div class="recipe-card" >
                 <h3>
-                  {{i}} -
+                  <!-- {{i}} - -->
                   {{item.recipeName}}
                 </h3>
 
@@ -14,9 +14,24 @@
             </a>
           </div>
 
+        </ng-container>
+
+      </div>
+      <ng-container *ngIf="!RecipesList">
+        <div class="row text-center">
+          <div class="col-md-6 m-auto">
+            <div class="alert alert-danger ">
+              <p class="my-2">
+                No Recipes Entered, Please <a href="Javascript:void(0)" routerLink="add-recipe">Add Recipe</a>
+              </p>
+            </div>
+
+          </div>
+
         </div>
+      </ng-container>
 
     </div>
-  </ng-container>
+
 
 
