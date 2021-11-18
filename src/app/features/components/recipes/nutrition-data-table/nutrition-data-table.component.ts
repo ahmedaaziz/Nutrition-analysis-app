@@ -7,7 +7,6 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class NutritionDataTableComponent implements OnInit {
   @Input() recipeInfo:any;
-  infoLoaded:boolean = false;
   constructor() { }
 
   ngOnInit(): void {

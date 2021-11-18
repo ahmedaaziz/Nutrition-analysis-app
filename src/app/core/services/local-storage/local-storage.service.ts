@@ -30,8 +30,7 @@ export class LocalStorageService {
     return JSON.parse(items)
   }
 
-  // remove data
-  removeData(){}
+
 
 
 }

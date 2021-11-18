@@ -1,7 +1,6 @@
-import { ActivatedRoute, Router } from '@angular/router';
+import {  Router } from '@angular/router';
 import { LocalStorageService } from './../../../../core/services/local-storage/local-storage.service';
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from "@angular/forms";
 import { HttpService } from "src/app/core/services/http/http.service";
 
 @Component({
